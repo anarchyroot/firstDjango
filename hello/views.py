@@ -10,5 +10,8 @@ def say_hello(request):
     return render(request, 'index.html', {'contacts': contacts})
 
 
-def addcontactform(request):
-    return render(request, 'addcontactform.html')
+def add_contact(request):
+    if request.method == "POST":
+        return render(request, 'contactadded.html')
+    else:
+        return render(request, 'addcontactform.html')

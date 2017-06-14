@@ -22,6 +22,7 @@ from .settings import MEDIA_ROOT
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.say_hello),
+    url(r'^add/$', views.add_contact),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-    url(r'^add/$', views.addcontactform),
+
 ]
